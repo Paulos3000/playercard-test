@@ -5,6 +5,8 @@ const debug = process.env.NODE_ENV !== "production";
 const webpack = require('webpack');
 const path = require('path');
 
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
   devtool: debug ? 'inline-sourcemap' : null,
   entry: path.join(__dirname, 'src', 'app-client.js'),
@@ -22,16 +24,27 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      test: path.join(__dirname, 'src'),
-      loader: ['babel-loader'],
-      query: {
-        cacheDirectory: 'babel_cache',
-        presets: debug ? ['react', 'es2015', 'react-hmre'] : ['react', 'es2015']
+    loaders: [
+      {
+         test: path.join(__dirname, 'src'),
+         loader: ['babel-loader'],
+         query: {
+            cacheDirectory: 'babel_cache',
+            presets: debug ? ['react', 'es2015', 'react-hmre'] : ['react', 'es2015']
+         }
+      },
+      {
+         test: /\.scss$/,
+         loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
+         // loader: ExtractTextPlugin.extract(
+         //     'style', // The backup style loader
+         //     'css?sourceMap!sass?sourceMap'
+         // )
       }
-    }]
+    ]
   },
   plugins: debug ? [] : [
+   //  new ExtractTextPlugin('styles.css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
