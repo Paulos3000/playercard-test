@@ -7,7 +7,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import routes from './routes';
-import NotFoundPage from './components/NotFoundPage';
+// import NotFoundPage from './components/NotFoundPage';
 
 // initialize the server and configure support for ejs templates
 const app = new Express();
@@ -39,10 +39,6 @@ app.get('*', (req, res) => {
       if (renderProps) {
         // if the current route matched we have renderProps
         markup = renderToString(<RouterContext {...renderProps}/>);
-      } else {
-        // otherwise we can render a 404 page
-        markup = renderToString(<NotFoundPage/>);
-        res.status(404);
       }
 
       // render the index template with the embedded React markup

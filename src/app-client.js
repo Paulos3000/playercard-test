@@ -1,9 +1,9 @@
-'use strict';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppRoutes from './components/AppRoutes';
+
+import Main from './components/Main';
 
 window.onload = () => {
-  ReactDOM.render(<AppRoutes/>, document.getElementById('main'));
+   ReactDOM.render(<Main onUpdate={() => window.scrollTo(0, 0)} />,
+   document.getElementById('main'));
 };
