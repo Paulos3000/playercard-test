@@ -1,9 +1,9 @@
 {
-  "name": "judo-heroes",
+  "name": "playercard-test",
   "version": "1.0.0",
-  "description": "Simple application to showcase how to achieve universal rendering and routing with React and Express.",
+  "description": "Example of a data driven re-usable player stats card component.",
   "main": "src/server.js",
-  "repository": "git@github.com:lmammino/judo-heroes.git",
+  "repository": "https://github.com/Paulos3000/playercard-test.git",
   "scripts": {
     "start": "NODE_ENV=production node_modules/.bin/babel-node --presets 'react,es2015' src/server.js",
     "start-dev": "npm run start-dev-hmr",
@@ -11,8 +11,8 @@
     "start-dev-hmr": "node_modules/.bin/webpack-dev-server --progress --inline --hot",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p"
   },
-  "author": "Luciano Mammino",
-  "license": "MIT",
+  "author": "Paul Child",
+  "license": "",
   "dependencies": {
     "babel-cli": "^6.11.4",
     "babel-core": "^6.13.2",
