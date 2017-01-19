@@ -7,7 +7,6 @@ export default class PlayerCard extends Component {
             <div className='container'>
                <h1 className='centered-text'>PlayerCard component</h1>
             </div>
-            <div className='box'></div>
          </div>
       )
    }
