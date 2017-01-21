@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
 
+// import components...
+import AvatarUI from './AvatarUI'
+import StatsUI from './StatsUI'
+import ClubBadge from './ClubBadge'
+
+// Render club badge in THIS component, absolute positioned.
+
 export default class PlayerCard extends Component {
    render() {
       return (
          <div className='playercard'>
-            <h1 className='centered-text'>Green Text?</h1>
-            <h2 className='centered-text'>Blue Text?</h2>
+            <AvatarUI />
+            {/* <ClubBadge /> */}
+            <StatsUI />
          </div>
       )
    }

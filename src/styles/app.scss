@@ -14,6 +14,29 @@ $primary-color: red;
    text-align: center;
 }
 
-h1 {
-   color: $primary-color;
+.playercard {
+   margin: 0 auto;
+   width: 300px;
+   // border: 1px solid black; <-- eventually integrate box-shadow (material-ui style)
+   // height: 600px; <-- let sub components fill out height
+}
+
+.card-section {
+   height: 300px;
+   margin: 0;
+   padding: 0;
+}
+
+/* AvatarUI Styles
+-------------------------------------*/
+
+.avatar-ui {
+   background-color: rgb(207, 209, 244);
+}
+
+/* StatsUI Styles
+-------------------------------------*/
+
+.stats-ui {
+   background-color: rgb(255, 222, 158);
 }

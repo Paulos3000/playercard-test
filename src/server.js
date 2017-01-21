@@ -24,15 +24,15 @@ app.get('*', (req, res) => {
     { routes, location: req.url },
     (err, redirectLocation, renderProps) => {
 
-      // in case of error display the error message
-      if (err) {
-        return res.status(500).send(err.message);
-      }
+      // // in case of error display the error message
+      // if (err) {
+      //   return res.status(500).send(err.message);
+      // }
 
-      // in case of redirect propagate the redirect to the browser
-      if (redirectLocation) {
-        return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
-      }
+      // // in case of redirect propagate the redirect to the browser
+      // if (redirectLocation) {
+      //   return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+      // }
 
       // generate the React markup for the current route
       let markup;
