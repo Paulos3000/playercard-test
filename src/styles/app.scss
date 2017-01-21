@@ -1,5 +1,19 @@
-/* MAIN SASS STYLESHEET */
+/* CSS Modules
+-------------------------------------*/
+@import url("./other.scss");
 
+
+/* Variables
+-------------------------------------*/
+$primary-color: red;
+
+
+/* Base Styles
+-------------------------------------*/
 .centered-text {
    text-align: center;
+}
+
+h1 {
+   color: $primary-color;
 }

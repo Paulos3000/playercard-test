@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Main from './components/Main';
+// Styles...
+import './styles/app.scss';
 
-// Stylesheets
-require('./styles/app.scss');
+// Main Component...
+import Main from './components/Main';
 
 window.onload = () => {
    ReactDOM.render(<Main onUpdate={() => window.scrollTo(0, 0)} />,
