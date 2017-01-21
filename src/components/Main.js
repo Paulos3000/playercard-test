@@ -1,18 +1,12 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 
 // import components...
 import PlayerCard from './PlayerCard'
 
-export default class Main extends Component {
+const Main = () => (
+   <div>
+      <PlayerCard />
+   </div>
+)
 
-   render() {
-
-      return (
-         <div>
-            {/*<img src='/img/driulis-gonzalez.jpg' />*/}
-            <PlayerCard />
-         </div>
-      )
-   }
-}
+export default Main
