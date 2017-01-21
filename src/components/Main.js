@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
+// import components...
 import PlayerCard from './PlayerCard'
 
 export default class Main extends Component {
+
    render() {
+
       return (
          <div>
             {/*<img src='/img/driulis-gonzalez.jpg' />*/}
