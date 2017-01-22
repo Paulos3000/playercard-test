@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Import classNames library
-import classNames from 'classnames';
-
 // Styles...
 import './styles/app.scss';
 

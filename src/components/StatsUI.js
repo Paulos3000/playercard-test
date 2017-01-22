@@ -58,7 +58,7 @@ const StatsUI = ({ playerId, playerData }) => {
                <div className='stat-field'>
                   <p>
                      <span>Assists</span>
-                     <span>{!currentPlayer.assists ? '' : currentPlayer.assists.value}</span>
+                     <span>{!currentPlayer.assists ? '?' : currentPlayer.assists.value}</span>
                   </p>
                </div>
                <div className='stat-field'>
