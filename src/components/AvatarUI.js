@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 
-export default class AvatarUI extends Component {
-   render() {
-      return (
-         <div className='card-section avatar-ui'>
-            {/*<h1 className='centered-text'>Avatar UI</h1>*/}
-         </div>
-      )
-   }
-}
+const AvatarUI = () => (
+   <div className='card-section avatar-section'>
+      <div className='player-selector'>
+         <p className='text-field'>Select a player...</p>
+      </div>
+      <div className='headshot-container'>
+         <img className='headshot' src='/img/p4916.png' />
+      </div>
+   </div>
+)
+
+export default AvatarUI

@@ -7,7 +7,6 @@
 -------------------------------------*/
 $primary-color: red;
 
-
 /* Base Styles
 -------------------------------------*/
 .centered-text {
@@ -17,12 +16,11 @@ $primary-color: red;
 .playercard {
    margin: 0 auto;
    width: 300px;
-   // border: 1px solid black; <-- eventually integrate box-shadow (material-ui style)
-   // height: 600px; <-- let sub components fill out height
+   box-shadow: 1px 1px 5px #888888; // <-- maybe play around with levels later...
+   position: relative;
 }
 
 .card-section {
-   height: 300px;
    margin: 0;
    padding: 0;
 }
@@ -30,13 +28,111 @@ $primary-color: red;
 /* AvatarUI Styles
 -------------------------------------*/
 
-.avatar-ui {
-   background-color: rgb(207, 209, 244);
+.avatar-section {
+   position: relative;
+   height: 298px;
+   background-image: url('./bg-img/pattern.png');
+   background-repeat: no-repeat;
+   padding: 16px;
+   .text-field {
+      padding: 10px 8px;
+   }
 }
+
+.player-selector {
+   width: 268px;
+   height: 40px;
+   background-color: #eaeaea;
+}
+
+.headshot-container {
+   width: 170px;
+   position: absolute;
+   bottom: 0;
+   left: 8px;
+}
+
+.headshot {
+   width: 100%;
+   height: 100%;
+}
+
+/* ClubBadge Styles
+-------------------------------------*/
+
+.club-badge {
+   width: 82px;
+   height: 82px;
+   border-radius: 100%;
+   border: 1px solid blue;
+   // background-color: #fff;
+   background-image: url('./bg-img/badges_sprite.png');
+   background-repeat: no-repeat;
+   position: absolute;
+   top: 259px;
+   right: 20px;
+}
+
+.badge-manu {
+   background-position: -100px;
+}
+
+// .badge-city {
+//   height: 100px;
+//   background-position: -5px -143px;
+// }
+//
+// .badge-spurs {
+//   height: 100px;
+//   background-position: -5px -288px;
+// }
+//
+// .badge-arsenal {
+//   height: 100px;
+//   background-position: -5px -5px;
+// }
+//
+// .badge-leicester {
+//   height: 100px;
+//   background-position: -5px -5px;
+// }
 
 /* StatsUI Styles
 -------------------------------------*/
 
-.stats-ui {
-   background-color: rgb(255, 222, 158);
+.stats-section {
+   background-color: #e90052;
+   height: 302px;
+   padding: 16px;
+}
+
+.player-header {
+   color: #fff;
+}
+
+h2, h3 {
+   font-family: 'arial', sans-serif;
+   margin: 0 0 9px 0;
+}
+
+h2 {
+   font-size: 22px;
+}
+
+h3 {
+   font-size: 16px;
+}
+
+.stat-container {
+   width: 268px;
+}
+
+.stat-field {
+   width: 100%;
+   height: 40px;
+   margin-bottom: 2px;
+   background-color: #eaeaea;
+   p {
+      padding: 10px 8px;
+   }
 }

@@ -1,8 +1,7 @@
 import React from 'react'
 
 const ClubBadge = () => (
-   <div>
-      <h2>Club Badge</h2>
+   <div className='club-badge badge-manu'>
    </div>
 )
 

@@ -33,11 +33,15 @@ module.exports = {
       },
       {
          test: /\.scss$/,
-         loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
+         loaders: [ 'style', 'css', 'sass?sourceMap' ]
          // loader: ExtractTextPlugin.extract(
          //     'style', // The backup style loader
          //     'css?sourceMap!sass?sourceMap'
          // )
+      },
+      {
+         test: /\.png$/,
+         loader: "url-loader?limit=10000&minetype=image/jpg"
       }
     ]
   },

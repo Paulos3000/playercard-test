@@ -12,7 +12,7 @@ export default class PlayerCard extends Component {
 
    constructor(props) {
       super(props)
-      // initialise state
+      console.log('initialise state')
       this.state = {
          playerData: {},
          selectedPlayer: null
@@ -23,6 +23,7 @@ export default class PlayerCard extends Component {
       // pull in all player data (simulate api request with AJAX)
       axios.get('./data/player-stats.json')
          .then(res => {
+            console.log('data fetch successful!')
             const playerData = res.data
             this.setState({ playerData });
          });
@@ -34,9 +35,8 @@ export default class PlayerCard extends Component {
 
       return (
          <div className='playercard'>
-            {/*<img src='/img/driulis-gonzalez.jpg' />*/}
             <AvatarUI />
-            {/* <ClubBadge /> */}
+            <ClubBadge />
             <StatsUI />
          </div>
       )
