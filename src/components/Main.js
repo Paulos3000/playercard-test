@@ -6,8 +6,6 @@ import PlayerCard from './PlayerCard'
 const Main = () => (
    <div>
       <PlayerCard />
-      <div className='badge_grid'>
-      </div>
    </div>
 )
 

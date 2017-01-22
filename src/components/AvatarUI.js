@@ -1,26 +1,38 @@
 import React, { Component } from 'react'
 
-const AvatarUI = ({ menuIsOpen, switchMenu }) => {
+import classNames from 'classnames'
+
+const AvatarUI = ({ playerData, playerId, menuIsOpen, toggleMenu, selectPlayer }) => {
+
+   // dynamic class to update bootstrap glyphicon when menu state is changed
+   let arrowDirection = classNames({
+      'up': menuIsOpen,
+      'down': !menuIsOpen,
+    });
 
    return (
       <div className='card-section avatar-section'>
          <div className='player-selector'>
             <p>Select a player...</p>
             <div
-               onClick={switchMenu}
-               className={`dropdown glyphicon glyphicon-menu-up`}>
+               onClick={toggleMenu}
+               className={`dropdown glyphicon glyphicon-menu-${arrowDirection}`}>
             </div>
          </div>
          {!menuIsOpen ? '' :
             <div className='player-dropdown'>
-               <div className='playeroption'><p>Player Name</p></div>
-               <div className='playeroption'><p>Player Name</p></div>
-               <div className='playeroption'><p>Player Name</p></div>
-               <div className='playeroption'><p>Player Name</p></div>
+               {playerData.map( (player, i) =>
+                  <div
+                     key={i}
+                     onClick={() => selectPlayer(player.player.id)}
+                     className='playeroption'>
+                     <p>{player.player.name.first} {player.player.name.last}</p>
+                  </div>
+               )}
             </div>
          }
          <div className='headshot-container'>
-            <img className='headshot' src='/img/p4916.png' />
+            <img className='headshot' src={`/img/p${playerId}.png`} />
          </div>
       </div>
    )
