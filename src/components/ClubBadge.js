@@ -4,23 +4,21 @@ const ClubBadge = ({ playerId, playerData }) => {
 
    // Visible Player object: use this to dynamically populate the component
    let visiblePlayer = null
+   let teamId = null
+
    if (playerData) {
       visiblePlayer = playerData.find(player => player.player.id === playerId)
+      teamId = visiblePlayer.player.currentTeam.id
    }
 
-   console.log('visiblePlayer: ', visiblePlayer)
-   // const teamMap = {
-   //    2064: 'Man-U',
-   //    4148: 'Midfielder',
-   //    4246: 'Forward',
-   //    4916: 'sdas',
-   //    8983: 'dsaf',
-   // }
-
    return (
-      <div className='ellipse badge-manu'>
-         <div className={`club-badge badge-manu`}>
-         </div>
+      <div className='ellipse'>
+         {!visiblePlayer ?
+            <div className={`club-badge badge-blank`}>
+            </div> :
+            <div className={`club-badge badge-${teamId}`}>
+            </div>
+         }
       </div>
    )
 }

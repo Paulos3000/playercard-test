@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .playercard {
-   margin: 0 auto;
+   margin: 40px auto;
    width: 300px;
    box-shadow: 1px 1px 5px #888888; // <-- maybe play around with levels later...
    position: relative;
@@ -80,7 +80,6 @@ h1, h2, h3, h4, h5, h6, p {
    }
 }
 
-
 .headshot-container {
    width: 170px;
    position: absolute;
@@ -107,7 +106,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .club-badge {
-   position: absolute;
+   position: relative;
    top: 6px;
    left: 6px;
    height: 70px;
@@ -116,25 +115,23 @@ h1, h2, h3, h4, h5, h6, p {
    background-repeat: no-repeat;
 }
 
-.badge-manu {
-   background-position: -420px -560px  ;
-}
+// Man Utd
+.badge-12 { background-position: -420px -560px; }
 
-.badge-city {
-  background-position: -560px -490px;
-}
+// Man City
+.badge-11 { background-position: -560px -490px; }
 
-.badge-spurs {
-  background-position: -350px -770px;
-}
+// Spurs
+.badge-21 { background-position: -350px -700px; }
 
-.badge-arsenal {
-  background-position: -70px -70px;
-}
+// Arsenal
+.badge-1 { background-position: -70px -70px; }
 
-.badge-leicester {
-  background-position: 0 0;
-}
+// Leicester
+.badge-26 { background-position: 0 0; }
+
+// Empty badge-26
+.badge-blank { background-position: -770px -350px, }
 
 /* StatsUI Styles
 -------------------------------------*/

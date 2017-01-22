@@ -45,14 +45,10 @@ export default class PlayerCard extends Component {
 
    render() {
 
-      // the selected player's id
+      // log the selected player's id
       console.log('this.state.selectedPlayerId: ', this.state.selectedPlayerId)
 
       const {playerData, selectedPlayerId, menuIsOpen} = this.state
-
-      // use id to return other values needed:
-      // fullName
-      // stats
 
       return (
          <div className='playercard'>
