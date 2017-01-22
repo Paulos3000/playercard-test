@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+// const divStyle = {
+//   clear: 'both',
+// };
+
 const StatsUI = () => (
    <div className='card-section stats-section'>
       <div className='player-header'>
@@ -8,19 +12,19 @@ const StatsUI = () => (
       </div>
       <div className='stat-container'>
          <div className='stat-field'>
-            <p className='attribute'>Appearances</p>
+            <p><span>Appearances</span><span>10</span></p>
          </div>
          <div className='stat-field'>
-            <p className='attribute'>Goals</p>
+            <p><span>Goals</span><span>5</span></p>
          </div>
          <div className='stat-field'>
-            <p className='attribute'>Assists</p>
+            <p><span>Assists</span><span>2</span></p>
          </div>
          <div className='stat-field'>
-            <p className='attribute'>Goals per match</p>
+            <p><span>Goals per match</span><span>0.06</span></p>
          </div>
          <div className='stat-field'>
-            <p className='attribute'>Passes per minute</p>
+            <p><span>Passes per minute</span><span>0.26</span></p>
          </div>
       </div>
    </div>

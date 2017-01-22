@@ -15,7 +15,8 @@ export default class PlayerCard extends Component {
       console.log('initialise state')
       this.state = {
          playerData: {},
-         selectedPlayer: null
+         selectedPlayer: null,
+         menuIsOpen: true
       }
    }
 
@@ -29,13 +30,21 @@ export default class PlayerCard extends Component {
          });
    }
 
+   switchMenu = () => {
+      this.setState({menuIsOpen: !this.state.menuIsOpen});
+      console.log('menu is open: ', this.state.menuIsOpen)
+   }
+
    render() {
 
       console.log('this.state.playerData: ', this.state.playerData)
 
       return (
          <div className='playercard'>
-            <AvatarUI />
+            <AvatarUI
+               menuIsOpen={this.state.menuIsOpen}
+               switchMenu={this.switchMenu}
+            />
             <ClubBadge />
             <StatsUI />
          </div>
