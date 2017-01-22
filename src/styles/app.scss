@@ -33,7 +33,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* AvatarUI Styles
 -------------------------------------*/
-
 .avatar-section {
    position: relative;
    height: 298px;
@@ -61,6 +60,9 @@ h1, h2, h3, h4, h5, h6, p {
       position: absolute;
       right: 15px;
       top: 10px;
+      &:hover {
+         color: #e90052;
+      }
    }
 }
 
@@ -71,7 +73,7 @@ h1, h2, h3, h4, h5, h6, p {
       width: 100%;
       height: 30px;
       background-color: #eaeaea;
-      padding: 5px;
+      padding: 6px;
       &:hover {
          cursor: hand;
          cursor: pointer;
