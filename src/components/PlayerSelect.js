@@ -15,7 +15,7 @@ const PlayerSelect = ({ playerData, playerId, menuIsOpen, toggleMenu, selectPlay
 
    // render dropdown menu and player headshot
    return (
-      <div className='card-section playerselect'>
+      <div className='section playerselect'>
          <Dropdown
             playerData={playerData}
             menuIsOpen={menuIsOpen}

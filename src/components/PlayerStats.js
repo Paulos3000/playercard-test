@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import positionMap from '../static/data/positionMap'
+import positionMap from '../static/map/positionMap'
 
 import Profile from './Profile'
 import StatContainer from './StatContainer'
@@ -10,7 +10,6 @@ const PlayerStats = ({ playerId, playerData }) => {
 
    // once api response has been received...
    if (playerData) {
-
       // find specific player object
       playerObj = playerData.find(player => player.player.id === playerId)
 
@@ -43,11 +42,10 @@ const PlayerStats = ({ playerId, playerData }) => {
             return value.toFixed(2)
          }
       }
-
    }
 
    return (
-      <div className='card-section stats-section'>
+      <div className='section stats'>
          {/* If current player does not exist, notify user, otherwise render stats*/}
          {!currentPlayer ? (
             <div>

@@ -1,17 +1,15 @@
 /* CSS Modules
 -------------------------------------*/
-@import url("./other.scss");
+@import url("./fonts.scss");
+@import url("./coordinates.scss");
+@import url("./badgestyles.scss");
 
-
-/* Variables
+/* Colors
 -------------------------------------*/
-$primary-color: red;
-
-/* Fonts
--------------------------------------*/
-h1, h2, h3, h4, h5, h6, p {
-   font-family: 'arial', sans-serif;
-}
+$pink: #e90052;
+$grey: #eaeaea;
+$hover-grey: #dddddd;
+$shadow-grey: #888888;
 
 /* Base Styles
 -------------------------------------*/
@@ -20,13 +18,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .playercard {
-   margin: 40px auto;
+   margin: 20px auto;
    width: 300px;
-   box-shadow: 1px 1px 5px #888888; // <-- maybe play around with levels later...
+   box-shadow: 1px 1px 5px $shadow-grey; // <-- maybe play around with levels later...
    position: relative;
 }
 
-.card-section {
+.section {
    margin: 0;
    padding: 0;
 }
@@ -36,7 +34,7 @@ h1, h2, h3, h4, h5, h6, p {
 .playerselect {
    position: relative;
    height: 298px;
-   background-image: url('./bg-img/pattern.png');
+   background-image: url('../static/img/pattern.png');
    background-repeat: no-repeat;
    padding: 16px;
    .text-field {
@@ -48,12 +46,12 @@ h1, h2, h3, h4, h5, h6, p {
    position: relative;
    width: 268px;
    height: 40px;
-   background-color: #eaeaea;
+   background-color: $grey;
    p {
       font-size: 16px;
       padding: 9px 12px;
    }
-   .dropdown {
+   .chevron {
       cursor: hand;
       cursor: pointer;
       font-size: 18px;
@@ -61,7 +59,7 @@ h1, h2, h3, h4, h5, h6, p {
       right: 15px;
       top: 10px;
       &:hover {
-         color: #e90052;
+         color: $pink;
       }
    }
 }
@@ -72,16 +70,17 @@ h1, h2, h3, h4, h5, h6, p {
       text-align: right;
       width: 100%;
       height: 30px;
-      background-color: #eaeaea;
+      background-color: $grey;
       padding: 5px 10px;
       &:hover {
          cursor: hand;
          cursor: pointer;
-         background-color: #dddddd;
+         background-color: $hover-grey;
       }
    }
 }
 
+// position and size headshot image by its container...
 .headshot-container {
    width: 170px;
    position: absolute;
@@ -89,69 +88,26 @@ h1, h2, h3, h4, h5, h6, p {
    left: 10px;
 }
 
+// headshot image to fill container
 .headshot {
    width: 100%;
    height: 100%;
 }
 
-/* ClubBadge Styles
+/* PlayerStats Styles
 -------------------------------------*/
-
-.ellipse {
-   width: 82px;
-   height: 82px;
-   border-radius: 100%;
-   position: absolute;
-   top: 259px;
-   right: 20px;
-   background: white;
-}
-
-.club-badge {
-   position: relative;
-   top: 6px;
-   left: 6px;
-   height: 70px;
-   width: 70px;
-   background-image: url('./bg-img/badges_sprite_transparent_70.png');
-   background-repeat: no-repeat;
-}
-
-// Man Utd
-.badge-12 { background-position: -420px -560px; }
-
-// Man City
-.badge-11 { background-position: -560px -490px; }
-
-// Spurs
-.badge-21 { background-position: -350px -700px; }
-
-// Arsenal
-.badge-1 { background-position: -70px -70px; }
-
-// Leicester
-.badge-26 { background-position: 0 0; }
-
-// Empty badge-26
-.badge-blank { background-position: -770px -350px, }
-
-/* StatsUI Styles
--------------------------------------*/
-
-.stats-section {
-   background-color: #e90052;
+.stats {
+   background-color: $pink;
    height: 302px;
    padding: 16px;
 }
-
 .loading {
-   color: #fff;
+   color: white;
    padding: 126px 0;
    text-align: center;
 }
-
 .player-header {
-   color: #fff;
+   color: white;
 }
 
 h2, h3 {
@@ -163,7 +119,6 @@ h2 {
    font-size: 22px;
    margin-bottom: 5px;
 }
-
 h3 {
    font-size: 16px;
 }
@@ -175,8 +130,8 @@ h3 {
 .stat-field {
    height: 40px;
    margin-bottom: -7px;
-   background-color: #eaeaea;
-   box-shadow: 0 0 20px #888888;
+   background-color: $grey;
+   box-shadow: 0 0 20px $shadow-grey;
    p {
       span:first-child {
          float: left;
@@ -190,15 +145,4 @@ h3 {
          padding: 7px 12px;
       }
    }
-}
-
-/* Grid Experiment
--------------------------------------*/
-.badge_grid {
-   margin: 20px auto;
-   width: 80px;
-   height: 80px;
-   background-image: url('./bg-img/badges_sprite.png');
-   background-repeat: no-repeat;
-   background-position: -100px;
 }

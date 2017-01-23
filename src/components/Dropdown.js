@@ -15,7 +15,7 @@ const Dropdown = ({ menuIsOpen, playerData, toggleMenu, selectPlayer }) => {
          <p>Select a player...</p>
          <div
             onClick={toggleMenu}
-            className={`dropdown glyphicon glyphicon-menu-${arrowDirection}`}>
+            className={`chevron glyphicon glyphicon-menu-${arrowDirection}`}>
          </div>
       </div>
 

@@ -13,7 +13,6 @@ export default class PlayerCard extends Component {
       this.state = {
          playerData: [], // initialise playerData array before 'api' response
          selectedPlayerId: 4916, // intialise playerId for Toby Alderweireld
-         playerObj: {},
          menuIsOpen: false // menu is unopen on page load
       }
    }
@@ -46,8 +45,6 @@ export default class PlayerCard extends Component {
    render() {
 
       const {playerData, menuIsOpen} = this.state
-
-      // old state based syntax...
       const playerId = this.state.selectedPlayerId
 
       return (
@@ -63,7 +60,7 @@ export default class PlayerCard extends Component {
                playerId={playerId}
                playerData={playerData.players}
             />
-         <PlayerStats
+            <PlayerStats
                playerId={playerId}
                playerData={playerData.players}
             />

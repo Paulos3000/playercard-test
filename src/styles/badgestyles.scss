@@ -1,0 +1,23 @@
+/* ClubBadge Styles
+-------------------------------------*/
+
+/* backing circle for club crests */
+.ellipse {
+   width: 82px;
+   height: 82px;
+   border-radius: 100%;
+   position: absolute;
+   top: 259px;
+   right: 20px;
+   background: white;
+}
+/* specific badge sprite, absolutely positioned inside ellipse */
+.club-badge {
+   position: relative;
+   top: 6px;
+   left: 6px;
+   height: 70px;
+   width: 70px;
+   background-image: url('../static/img/badges_sprite_transparent.png');
+   background-repeat: no-repeat;
+}
