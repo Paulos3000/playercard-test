@@ -26,7 +26,7 @@ React's component architecture used to create well-organised modular code, and s
 
 All .png files optimised with https://tinypng.com. Sprite sheet reduced to 70% of original size to fit within ellipse dimension (as indicated in guide .psd file). CSS `background-position` value shifted in 70px increments to switch between club badges. White background removed from original spritesheet to make it transparent, as the div containing the image had to remain square to contain all badge sprites (when not transparent, white corners of the image spilled outside of the ellipse).
 
-If application were larger, most likely would have implemented Redux to manage global store state, but since it is a single component, this seemed unnecessarily verbose so I opted for react's native state object instead instead.
+If application were larger, most likely would have implemented Redux to manage global store state, but since it is a relatively simple component, this seemed unnecessarily verbose under the circumstances and I opted for react's native state object instead.
 
 ---
 
