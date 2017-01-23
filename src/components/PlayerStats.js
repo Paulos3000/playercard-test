@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import positionMap from '../static/data/positionMap'
 
-import PlayerHeader from './PlayerHeader'
+import Profile from './Profile'
 import StatContainer from './StatContainer'
 
 const PlayerStats = ({ playerId, playerData }) => {
@@ -48,18 +48,17 @@ const PlayerStats = ({ playerId, playerData }) => {
 
    return (
       <div className='card-section stats-section'>
-
+         {/* If current player does not exist, notify user, otherwise render stats*/}
          {!currentPlayer ? (
             <div>
-               <h2 className='loading'>Loading Player Content</h2>
+               <h3 className='loading'>Loading Stats...</h3>
             </div>
             ) : (
             <div>
-               <PlayerHeader currentPlayer={currentPlayer} />
+               <Profile currentPlayer={currentPlayer} />
                <StatContainer currentPlayer={currentPlayer} />
             </div>
          )}
-
       </div>
    )
 }
