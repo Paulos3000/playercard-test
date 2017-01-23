@@ -32,7 +32,7 @@ const AvatarUI = ({ playerData, playerId, menuIsOpen, toggleMenu, selectPlayer }
             </div>
          }
          <div className='headshot-container'>
-            <img className='headshot' src={`/img/p${playerId}.png`} />
+            <img className='headshot' src={`/img/p${playerId}-tiny.png`} />
          </div>
       </div>
    )
