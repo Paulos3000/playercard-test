@@ -18,15 +18,15 @@ Example of a data driven re-usable player stats card component.
 
 ## The process...
 
-Everything contained within a fixed width/height div centered.
+The 'card' itself is contained within a fixed width/height div centered, and a slight box shadow applied for 'material' effect.
 
-Data fetched from provided json file with AJAX call (axios library). Response payload used to update state, from which all relevant values have been filtered and calculated and used to populate their respective fields.
+Data fetched from provided .json file with AJAX call (axios library). Response payload used to update React state, from which all relevant values have been filtered and calculated and used to populate their respective fields.
 
-React's component architecture used to create well-organised modular code.
+React's component architecture used to create well-organised modular code, and semantic tags for ease of identification.
 
-All .png files were optimised with https://tinypng.com/. Sprite sheet reduced to 70% to fit size of ellipse as indicated in guide .psd. Background-position shifted in 70px increments to switch between club badges. White background removed from spritesheet to make it transparent, as the div containing the image had to remain square to contain all badge sprites, and if not transparent, white corners of the image spilled outside of the ellipse.
+All .png files optimised with https://tinypng.com. Sprite sheet reduced to 70% of original size to fit within ellipse dimension (as indicated in guide .psd file). CSS `background-position` value shifted in 70px increments to switch between club badges. White background removed from original spritesheet to make it transparent, as the div containing the image had to remain square to contain all badge sprites (when not transparent, white corners of the image spilled outside of the ellipse).
 
-If it were a larger application, most likely would have implemented Redux to manage global store state, but since it is a single component, this seemed unnecessarily verbose so I opted for react's native state object instead.
+If application were larger, most likely would have implemented Redux to manage global store state, but since it is a single component, this seemed unnecessarily verbose so I opted for react's native state object instead instead.
 
 ---
 
