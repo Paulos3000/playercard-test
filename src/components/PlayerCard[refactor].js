@@ -3,17 +3,17 @@ import axios from 'axios'
 
 // import components...
 import PlayerSelect from './PlayerSelect'
-import PlayerStats from './PlayerStats'
+import StatsUI from './StatsUI'
 import ClubBadge from './ClubBadge'
 
 export default class PlayerCard extends Component {
 
    constructor(props) {
       super(props)
+      console.log('initialise state')
       this.state = {
-         playerData: [], // initialise playerData array before 'api' response
+         playerData: {}, // initilise playerData object before 'api' response
          selectedPlayerId: 4916, // intialise playerId for Toby Alderweireld
-         playerObj: {},
          menuIsOpen: false // menu is unopen on page load
       }
    }
@@ -25,7 +25,7 @@ export default class PlayerCard extends Component {
             console.log('data fetch successful')
             const playerData = res.data
             this.setState({ playerData });
-         })
+         });
    }
 
    // Toggle menu state between up and down
@@ -45,26 +45,20 @@ export default class PlayerCard extends Component {
 
    render() {
 
-      const {playerData, menuIsOpen} = this.state
+      // log the selected player's id
+      console.log('this.state.selectedPlayerId: ', this.state.selectedPlayerId)
 
-      // old state based syntax...
-      const playerId = this.state.selectedPlayerId
+      const {playerData, selectedPlayerId, menuIsOpen} = this.state
 
       return (
          <div className='playercard'>
-            <PlayerSelect
-               playerId={playerId}
-               playerData={playerData.players}
-               menuIsOpen={menuIsOpen}
-               toggleMenu={this.toggleMenu}
-               selectPlayer={this.selectPlayer}
-            />
+            <PlayerSelect {...this.props} />
             <ClubBadge
-               playerId={playerId}
+               playerId={selectedPlayerId}
                playerData={playerData.players}
             />
-         <PlayerStats
-               playerId={playerId}
+            <StatsUI
+               playerId={selectedPlayerId}
                playerData={playerData.players}
             />
          </div>

@@ -31,9 +31,9 @@ h1, h2, h3, h4, h5, h6, p {
    padding: 0;
 }
 
-/* AvatarUI Styles
+/* PlayerSelect Styles
 -------------------------------------*/
-.avatar-section {
+.playerselect {
    position: relative;
    height: 298px;
    background-image: url('./bg-img/pattern.png');
@@ -142,6 +142,10 @@ h1, h2, h3, h4, h5, h6, p {
    background-color: #e90052;
    height: 302px;
    padding: 16px;
+}
+
+.loading {
+   color: #fff;
 }
 
 .player-header {

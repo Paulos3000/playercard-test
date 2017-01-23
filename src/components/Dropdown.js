@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Dropdown = ({ menuIsOpen, playerData, toggleMenu }) => {
+const Dropdown = ({ menuIsOpen, playerData, toggleMenu, selectPlayer }) => {
 
    // dynamic class to update bootstrap glyphicon when menu state is changed
    let arrowDirection = classNames({
@@ -10,7 +10,7 @@ const Dropdown = ({ menuIsOpen, playerData, toggleMenu }) => {
    });
 
    return (
-
+   <div>
       <div className='player-selector'>
          <p>Select a player...</p>
          <div
@@ -30,6 +30,7 @@ const Dropdown = ({ menuIsOpen, playerData, toggleMenu }) => {
             </div>
          )}
       </div>}
+   </div>
    )
 }
 
