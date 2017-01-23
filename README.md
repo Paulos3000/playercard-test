@@ -2,6 +2,8 @@
 
 Example of a data driven re-usable player stats card component.
 
+---
+
 ## Install dependencies
 `npm install`
 
