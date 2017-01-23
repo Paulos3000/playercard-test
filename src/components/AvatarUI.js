@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-
 import classNames from 'classnames'
+
+import Headshot from './Headshot'
 
 const AvatarUI = ({ playerData, playerId, menuIsOpen, toggleMenu, selectPlayer }) => {
 
@@ -12,6 +13,7 @@ const AvatarUI = ({ playerData, playerId, menuIsOpen, toggleMenu, selectPlayer }
 
    return (
       <div className='card-section avatar-section'>
+
          <div className='player-selector'>
             <p>Select a player...</p>
             <div
@@ -31,9 +33,8 @@ const AvatarUI = ({ playerData, playerId, menuIsOpen, toggleMenu, selectPlayer }
                )}
             </div>
          }
-         <div className='headshot-container'>
-            <img className='headshot' src={`/img/p${playerId}-tiny.png`} />
-         </div>
+         <Headshot playerId={playerId} />
+
       </div>
    )
 
