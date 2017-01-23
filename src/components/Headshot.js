@@ -5,7 +5,7 @@ const Headshot = ({ playerId }) => (
       {
          !playerId ?
          <div>
-            <h3 className='loading2'>Loading</h3>
+            <h3>Loading</h3>
          </div> :
          <img className='headshot' src={`/img/p${playerId}-tiny.png`} />
       }

@@ -14,7 +14,7 @@ const PlayerStats = ({ playerId, playerData }) => {
       // find specific player object
       playerObj = playerData.find(player => player.player.id === playerId)
 
-      // Deconstruct variables for shorthand use
+      // deconstruct variables for shorthand use
       const {name} = playerObj.player
       const {position} = playerObj.player.info
       const {stats} = playerObj
