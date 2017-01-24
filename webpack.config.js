@@ -52,7 +52,7 @@ module.exports = {
     ]
   },
   plugins: debug ? [] : [
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('../css/styles.css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
