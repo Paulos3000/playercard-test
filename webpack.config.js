@@ -1,9 +1,11 @@
-const debug = process.env.NODE_ENV !== "production";
-
 const webpack = require('webpack');
 const path = require('path');
 
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const debug = process.env.NODE_ENV !== "production";
+
+// var styles = 'css!csslint';
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: debug ? 'inline-sourcemap' : null,
@@ -33,7 +35,11 @@ module.exports = {
       },
       {
          test: /\.scss$/,
-         loaders: [ 'style', 'css', 'sass?' ]
+         loaders: debug ? [ 'style', 'css', 'sass' ] : [],
+         loader: debug ? '' : ExtractTextPlugin.extract(
+             'style', // The backup style loader
+             'css?sourceMap!sass?sourceMap'
+         )
          // loader: ExtractTextPlugin.extract(
          //     'style', // The backup style loader
          //     'css?sourceMap!sass?sourceMap'
@@ -46,7 +52,7 @@ module.exports = {
     ]
   },
   plugins: debug ? [] : [
-   //  new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('styles.css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
