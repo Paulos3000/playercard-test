@@ -39,7 +39,7 @@ Example of a data driven re-usable player stats card component.
 ## About
 
 App makes use of:
-
+* [npm](https://www.npmjs.com/) for managing node dependencies
 * [React](https://github.com/facebook/react)
 * [Express](http://expressjs.com)
 * [Babel](http://babeljs.io) for ES6/ES7 and JSX transpiling
