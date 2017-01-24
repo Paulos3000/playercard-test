@@ -47,8 +47,8 @@ App makes use of:
 * [Webpack Dev Middleware](http://webpack.github.io/docs/webpack-dev-middleware.html)
 * [Webpack Hot Middleware](https://github.com/glenjamin/webpack-hot-middleware)
 * [Axios](https://github.com/mzabriskie/axios) for AJAX
-* [Classnames](https://github.com/JedWatson/classnames)
-* [ReactCSSTransitionGroup](https://www.npmjs.com/package/react-addons-css-transition-group)
+* [Classnames](https://github.com/JedWatson/classnames) for dynamic class names
+* [ReactCSSTransitionGroup](https://www.npmjs.com/package/react-addons-css-transition-group) for triggering animations
 
 
 
