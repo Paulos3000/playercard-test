@@ -40,10 +40,6 @@ module.exports = {
              'style', // The backup style loader
              'css?sourceMap!sass?sourceMap'
          )
-         // loader: ExtractTextPlugin.extract(
-         //     'style', // The backup style loader
-         //     'css?sourceMap!sass?sourceMap'
-         // )
       },
       {
          test: /\.png$/,
