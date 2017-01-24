@@ -2,7 +2,7 @@
 
 Example of a data driven re-usable player stats card component.
 
----
+
 
 ### Install dependencies
 `npm install`
@@ -16,7 +16,7 @@ Example of a data driven re-usable player stats card component.
 ### Run production server
 `npm start`
 
----
+
 
 ## The process...
 
@@ -34,7 +34,7 @@ Example of a data driven re-usable player stats card component.
 
 - All .png files are optimised with https://tinypng.com. Sprite sheet is reduced to 70% of original size to fit within ellipse dimension (as indicated in guide .psd file). CSS `background-position` values are shifted in 70px increments to switch between club badges. The white background has been removed from original spritesheet to make it transparent, as the div containing the image had to remain square to contain the badge images (when background was opaque, white corners of the image spilled outside of the ellipse).
 
----
+
 
 ## About
 
