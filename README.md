@@ -51,4 +51,4 @@ App makes use of:
 * [ReactCSSTransitionGroup](https://www.npmjs.com/package/react-addons-css-transition-group) for triggering animations
 
 
-### See `package.json` for complete list of dependencies.
+#### See `package.json` for complete list of dependencies.
