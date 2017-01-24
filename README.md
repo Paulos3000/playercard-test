@@ -18,7 +18,7 @@ Example of a data driven re-usable player stats card component.
 
 
 
-## The process...
+## Summary:
 
 - Webpack bundles all JSX/ES6 code into standard ES5 in a single `bundle.js` file, also it bundles CSS styles into a static stylesheet for production which allows browser to load CSS at the same time as JS, avoiding any flashes of unstyled content.
 
