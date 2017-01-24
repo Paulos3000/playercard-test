@@ -2,9 +2,7 @@ import React from 'react'
 
 const ClubBadge = ({ playerId, playerData }) => {
 
-   let playerObj = null
-   let teamId = null
-
+   let playerObj, teamId
    if (playerData) {
       // find specific player object and use that to find current teamId
       playerObj = playerData.find(player => player.player.id === playerId)

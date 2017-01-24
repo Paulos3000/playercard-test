@@ -6,8 +6,14 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 const Dropdown = ({ menuIsOpen, playerData, toggleMenu, selectPlayer }) => {
 
+   // dynamic class to update bootstrap glyphicon when menu state is changed
+   let direction = classNames({
+      'up': menuIsOpen,
+      'down': !menuIsOpen,
+   });
+
    // function that returns markup for dropdown menu
-   const cascadeMenu = () => {
+   const renderMenu = () => {
       return (
          <div className='player-dropdown'>
             {playerData.map( (player, i) =>
@@ -22,14 +28,8 @@ const Dropdown = ({ menuIsOpen, playerData, toggleMenu, selectPlayer }) => {
       )
    }
 
-   // dynamic class to update bootstrap glyphicon when menu state is changed
-   let arrowDirection = classNames({
-      'up': menuIsOpen,
-      'down': !menuIsOpen,
-   });
-
    // ternary operator to define whether menu is visible or not
-   let dropdownMenu = !menuIsOpen ? '' : cascadeMenu()
+   let dropdownMenu = !menuIsOpen ? '' : renderMenu()
 
    return (
    <div>
@@ -37,7 +37,7 @@ const Dropdown = ({ menuIsOpen, playerData, toggleMenu, selectPlayer }) => {
          <p>Select a player...</p>
          <div
             onClick={toggleMenu}
-            className={`chevron glyphicon glyphicon-menu-${arrowDirection}`}>
+            className={`chevron glyphicon glyphicon-menu-${direction}`}>
          </div>
       </div>
 
