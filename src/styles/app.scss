@@ -3,6 +3,7 @@
 @import url("./fonts.scss");
 @import url("./coordinates.scss");
 @import url("./badgestyles.scss");
+@import url("./transitions.scss");
 
 /* Colors
 -------------------------------------*/
@@ -100,25 +101,6 @@ $shadow-grey: #888888;
 .headshot {
    width: 100%;
    height: 100%;
-}
-
-/* Dropdown Menu Transitions
--------------------------------------*/
-
-.menu-enter {
-  top: -194px;
-}
-.menu-enter.menu-enter-active {
-  top: 0;
-  transition: all 300ms ease-in-out;
-}
-
-.menu-leave {
-  top: 0;
-}
-.menu-leave.menu-leave-active {
-  top: -194px;
-  transition: all 200ms ease-in-out;
 }
 
 /* PlayerStats Styles

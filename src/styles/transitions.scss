@@ -1,0 +1,17 @@
+/* Dropdown Menu Transitions
+-------------------------------------*/
+.menu-enter {
+  top: -194px;
+}
+.menu-enter.menu-enter-active {
+  top: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.menu-leave {
+  top: 0;
+}
+.menu-leave.menu-leave-active {
+  top: -194px;
+  transition: all 200ms ease-in-out;
+}
