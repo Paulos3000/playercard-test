@@ -64,18 +64,26 @@ $shadow-grey: #888888;
    }
 }
 
+.animation-wrapper {
+   height: 184px;
+   overflow: hidden;
+}
+
 .player-dropdown {
    width: 268px;
+   position: relative;
    .playeroption {
       text-align: right;
       width: 100%;
-      height: 30px;
       background-color: $grey;
-      padding: 5px 10px;
+      padding: 1px 10px;
       &:hover {
          cursor: hand;
          cursor: pointer;
          background-color: $hover-grey;
+      }
+      p {
+         margin: 8px 0;
       }
    }
 }
@@ -92,6 +100,25 @@ $shadow-grey: #888888;
 .headshot {
    width: 100%;
    height: 100%;
+}
+
+/* Dropdown Menu Transitions
+-------------------------------------*/
+
+.menu-enter {
+  top: -194px;
+}
+.menu-enter.menu-enter-active {
+  top: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.menu-leave {
+  top: 0;
+}
+.menu-leave.menu-leave-active {
+  top: -194px;
+  transition: all 200ms ease-in-out;
 }
 
 /* PlayerStats Styles

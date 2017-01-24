@@ -20,15 +20,19 @@ Example of a data driven re-usable player stats card component.
 
 ## The process...
 
-The 'card' itself is contained within a fixed width/height div centered, and a slight box shadow applied for 'material' effect.
+- The 'card' itself is contained within a fixed width/height div centered, and a slight box shadow applied for 'material' effect.
 
-Data fetched from provided .json file with AJAX call (axios library). Response payload used to update React state, from which all relevant values have been filtered and calculated and used to populate their respective fields.
+- Data fetched from provided .json file with AJAX call (axios library). Response payload used to update React state, from which all relevant values have been filtered and calculated and used to populate their respective fields.
 
-React's component architecture used to create well-organised modular code, and semantic tags for ease of identification.
+- Regarding state: if the application were larger, most likely would have implemented Redux to manage global state, but being a relatively simple component, this seemed unnecessarily verbose under the circumstances and I opted for react's native `this.state` object instead.
 
-All .png files optimised with https://tinypng.com. Sprite sheet reduced to 70% of original size to fit within ellipse dimension (as indicated in guide .psd file). CSS `background-position` value shifted in 70px increments to switch between club badges. White background removed from original spritesheet to make it transparent, as the div containing the image had to remain square to contain all badge sprites (when not transparent, white corners of the image spilled outside of the ellipse).
+- React's component architecture used to create well-organised modular code, and semantic tags for ease of identification.
 
-If application were larger, most likely would have implemented Redux to manage global store state, but since it is a relatively simple component, this seemed unnecessarily verbose under the circumstances and I opted for react's native state object instead.
+- The dropdown menu makes use of the 'ReactCSSTransitionGroup' lib, which dynamically applies a specific class to the component when it is mounted or unmounted, and specified time period in which the animation is allowed to occur. The rest is taken care of by CSS3 Transitions as declared in the stylesheet.
+
+- All .png files optimised with https://tinypng.com. Sprite sheet reduced to 70% of original size to fit within ellipse dimension (as indicated in guide .psd file). CSS `background-position` value shifted in 70px increments to switch between club badges. White background removed from original spritesheet to make it transparent, as the div containing the image had to remain square to contain all badge sprites (when not transparent, white corners of the image spilled outside of the ellipse).
+
+
 
 ---
 
