@@ -20,7 +20,7 @@ Example of a data driven re-usable player stats card component.
 
 ## The process...
 
-- Webpack bundles all JSX/ES6 code into standard ES5 in single `bundle.js` file which is readable by all modern browsers, also in production it bundles CSS styles into a static stylesheet which allows browser to load CSS at the same time as JS, avoiding the any flashes of unstyled content.
+- Webpack bundles all JSX/ES6 code into standard ES5 in a single `bundle.js` file, also it bundles CSS styles into a static stylesheet for production which allows browser to load CSS at the same time as JS, avoiding the any flashes of unstyled content.
 
 - React's component architecture is used to create well-organised modular code, and semantic tags for ease of identification.
 
