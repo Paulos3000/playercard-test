@@ -4,16 +4,16 @@ Example of a data driven re-usable player stats card component.
 
 
 
-### Install dependencies
+#### Install dependencies
 `npm install`
 
-### Run development server
+#### Run development server
 `npm run start-dev`
 
-### Production build
+#### Production build
 `npm run build`
 
-### Run production server
+#### Run production server
 `npm start`
 
 
